@@ -37,7 +37,7 @@ def add_panel(username):
     button = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="Tambahkan Ke Group", url=f"http://t.me/{suheroku}?startgroup=appstart")
+                InlineKeyboardButton(text="Tambahkan Ke Group", url=f"http://t.me/{username}?startgroup=appstart")
             ]
         ]
     )
