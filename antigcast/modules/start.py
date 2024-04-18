@@ -15,8 +15,8 @@ CTYPE = enums.ChatType
 inlinegc = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="Owner", url=""), http://t.me/suheroku 
-            InlineKeyboardButton(text="Channel", url="") https://t.me/TerasDodit
+            InlineKeyboardButton(text="Owner", url="http://t.me/suheroku") 
+            InlineKeyboardButton(text="Channel", url="https://t.me/TerasDodit")
         ]
     ]
 )
@@ -27,8 +27,8 @@ inline = InlineKeyboardMarkup(
                     InlineKeyboardButton(text="Daftarkan Grup", callback_data = "langganan")
         ],
         [
-                    InlineKeyboardButton(text="Creator", url=f"http://t.me/{suheroku}"),
-                    InlineKeyboardButton(text="Channel", url="") https://t.me/TerasDodit
+                    InlineKeyboardButton(text="Creator", url=f"http://t.me/suheroku")
+                    InlineKeyboardButton(text="Channel", url="https://t.me/TerasDodit") 
         ]
     ]
 )
@@ -47,7 +47,7 @@ def add_panel(username):
 def admin_panel():
     buttons = [
         [
-            InlineKeyboardButton(text="Hubungi Owner", url=f"http://t.me/{suheroku}")
+            InlineKeyboardButton(text="Hubungi Owner", url=f"http://t.me/suheroku")
         ],
     ]
 
