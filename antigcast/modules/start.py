@@ -15,7 +15,7 @@ CTYPE = enums.ChatType
 inlinegc = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="Owner", url="http://t.me/suheroku")
+            InlineKeyboardButton(text="Owner", url="http://t.me/suheroku"")
             InlineKeyboardButton(text="Channel", url="https://t.me/TerasDodit")
         ]
     ]
