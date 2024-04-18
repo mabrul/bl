@@ -27,7 +27,7 @@ inline = InlineKeyboardMarkup(
                     InlineKeyboardButton(text="Daftarkan Grup", callback_data = "langganan")
         ],
         [
-                    InlineKeyboardButton(text="Creator", url=f"https://t.me/suheroku")
+                    InlineKeyboardButton(text="Creator", url=f"https://t.me/suheroku"),
                     InlineKeyboardButton(text="Channel", url="https://t.me/TerasDodit") 
         ]
     ]
