@@ -16,7 +16,7 @@ inlinegc = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(text="Owner", url=""), http://t.me/suheroku 
-            InlineKeyboardButton(text="Channel", url="") #isi link channel store
+            InlineKeyboardButton(text="Channel", url="") https://t.me/TerasDodit
         ]
     ]
 )
@@ -28,7 +28,7 @@ inline = InlineKeyboardMarkup(
         ],
         [
                     InlineKeyboardButton(text="Creator", url=f"http://t.me/{suheroku}"),
-                    InlineKeyboardButton(text="Channel", url="") #isi link channel store
+                    InlineKeyboardButton(text="Channel", url="") https://t.me/TerasDodit
         ]
     ]
 )
@@ -37,7 +37,7 @@ def add_panel(username):
     button = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="Tambahkan Ke Group", url=f"http://t.me/{username}?startgroup=appstart")
+                InlineKeyboardButton(text="Tambahkan Ke Group", url=f"http://t.me/{suheroku}?startgroup=appstart")
             ]
         ]
     )
