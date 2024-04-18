@@ -27,7 +27,7 @@ inline = InlineKeyboardMarkup(
                     InlineKeyboardButton(text="Daftarkan Grup", callback_data = "langganan")
         ],
         [
-                    InlineKeyboardButton(text="Creator", url=f"http://t.me/suheroku")
+                    InlineKeyboardButton(text="Creator", url=f"https://t.me/suheroku")
                     InlineKeyboardButton(text="Channel", url="https://t.me/TerasDodit") 
         ]
     ]
@@ -37,7 +37,7 @@ def add_panel(username):
     button = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="Tambahkan Ke Group", url=f"http://t.me/{username}?startgroup=appstart")
+                InlineKeyboardButton(text="Tambahkan Ke Group", url=f"https://t.me/{username}?startgroup=appstart")
             ]
         ]
     )
@@ -47,7 +47,7 @@ def add_panel(username):
 def admin_panel():
     buttons = [
         [
-            InlineKeyboardButton(text="Hubungi Owner", url=f"http://t.me/suheroku")
+            InlineKeyboardButton(text="Hubungi Owner", url=f"https://t.me/suheroku")
         ],
     ]
 
