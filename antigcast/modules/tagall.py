@@ -42,7 +42,7 @@ async def isAdmin(filter, client, update):
 
 Admin = filters.create(isAdmin)
 
-@Bot.on_message(filters.command("tagall") & filters.group & Admin)
+@Bot.on_message(filters.command("all") & filters.group & Admin)
 async def tagall(client, message: Message):
     await message.delete()
     chat_id = message.chat.id
@@ -70,12 +70,12 @@ async def tagall(client, message: Message):
             usrnum = 0
             usrtxt = ""
     try:
-        await client.send_message(chat_id, "**Proses Tag All selesai.")
+        await client.send_message(chat_id, "**Proses Tag All selesai ya anjg.")
         spam_chats.remove(chat_id)
     except:
         pass
 
-@Bot.on_message(filters.command("cancel") & filters.group & Admin)
+@Bot.on_message(filters.command("stop") & filters.group & Admin)
 async def untag(client, message: Message):
     if not message.chat.id in spam_chats:
         return await message.reply("**Sepertinya tidak ada tagall disini.**")
