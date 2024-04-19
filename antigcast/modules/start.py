@@ -59,7 +59,7 @@ async def start_msgmessag(app : Bot, message : Message):
     username = bot.username
     user = message.from_user.mention
     chat_type = message.chat.type
-    if chat_type ==
+    if chat_type == CTYPE.PUBLICK
         msg = f"👋🏻 Hi {user}!\n\nBot ini akan menghapus otomatis pesan gcast yang mengganggu di group. Tambahkan bot sebagai admin agar bisa berjalan dengan baik."
         try:
             await message.reply(text=msg, reply_markup=inline)
