@@ -59,7 +59,6 @@ async def start_msgmessag(app : Bot, message : Message):
     username = bot.username
     user = message.from_user.mention
     msg = f"👋🏻 hai anak anjeng {user}!\n\nBot ini akan menghapus pesan gcast ya anjg tambahin bot ini jadi amin do group lu yang yang ga seberapa itu ya monyet."
-        try:
             await message.reply(text=msg, reply_markup=inline)
         except FloodWait as e:
             await asyncio.sleep(e.value)
