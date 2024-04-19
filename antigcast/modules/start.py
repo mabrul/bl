@@ -15,8 +15,8 @@ CTYPE = enums.ChatType
 inlinegc = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="Owner", url="http://t.me/suheroku"),
-            InlineKeyboardButton(text="Channel", url="https://t.me/TerasDodit")
+            InlineKeyboardButton(text="Owner", url="http://t.me/rewe_anu"),
+            InlineKeyboardButton(text="Channel", url="https://t.me/nunagabut2")
         ]
     ]
 )
@@ -27,8 +27,8 @@ inline = InlineKeyboardMarkup(
                     InlineKeyboardButton(text="Daftarkan Grup", callback_data = "langganan")
         ],
         [
-                    InlineKeyboardButton(text="Creator", url=f"https://t.me/suheroku"),
-                    InlineKeyboardButton(text="Channel", url="https://t.me/TerasDodit") 
+                    InlineKeyboardButton(text="Creator", url=f"https://t.me/rewe_anu"),
+                    InlineKeyboardButton(text="Channel", url="https://t.me/nunagabut2") 
         ]
     ]
 )
@@ -47,7 +47,7 @@ def add_panel(username):
 def admin_panel():
     buttons = [
         [
-            InlineKeyboardButton(text="Hubungi Owner", url=f"https://t.me/suheroku")
+            InlineKeyboardButton(text="Hubungi Owner", url=f"https://t.me/rewe_anu")
         ],
     ]
 
@@ -60,14 +60,14 @@ async def start_msgmessag(app : Bot, message : Message):
     user = message.from_user.mention
     chat_type = message.chat.type
     if chat_type == CTYPE.PRIVATE:
-        msg = f"👋🏻 Hi {user}!\n\nBot ini akan menghapus otomatis pesan gcast yang mengganggu di group. Tambahkan bot sebagai admin agar bisa berjalan dengan baik."
+        msg = f"👋🏻 hai anak anjeng {user}!\n\nBot ini akan menghapus pesan gcast ya anjg tambahin bot ini jadi amin do group lu yang yang ga seberapa itu ya monyet."
         try:
             await message.reply(text=msg, reply_markup=inline)
         except FloodWait as e:
             await asyncio.sleep(e.value)
             await message.reply(text=msg, reply_markup=inline)
     elif chat_type in [CTYPE.GROUP, CTYPE.SUPERGROUP]:
-        msg = f"**Hey!**\n\n__Jadikan saya sebagai admin group, maka group ini tidak akan ada spam gcast yang mengganggu!__\n\nCreated by {OWNER_NAME}"
+        msg = f"**woy anjg!**\n\n__minimal adminin gua lah, biar gcast nya ga masuk ke group sampah lo ngentod!__\n\nCreated by @rewe_anu"
         
         try:
             await message.reply(text=msg, reply_markup=inlinegc)
@@ -79,12 +79,12 @@ async def start_msgmessag(app : Bot, message : Message):
 async def close_cbq(client: Bot, query: CallbackQuery):
     try:
         await query.message.reply_to_message.delete()
-        await client.send_message(query.from_user.id, "**Pendaftaran Dibatalkan**")
+        await client.send_message(query.from_user.id, "**Pendaftaran Dibatalkan anjg**")
     except:
         pass
     try:
         await query.message.delete()
-        await client.send_message(query.from_user.id, "**Pendaftaran Dibatalkan**")
+        await client.send_message(query.from_user.id, "**Pendaftaran Dibatalkan anjg**")
     except:
         pass
 
@@ -93,7 +93,7 @@ async def close_cbq(client: Bot, query: CallbackQuery):
 @Bot.on_callback_query(filters.regex(r"langganan"))
 async def bayar_cbq(client: Bot, query: CallbackQuery):
     btn = InlineKeyboardMarkup(admin_panel())
-    text = """**Silahkan pilih Plan Subscription untuk berlangganan Bot Anti Gcast **
+    text = """**Silahkan pilih lu mau yang berapa bulan anjg **
 
 1 Bulan : `Rp. 25.000,-`  
 3 Bulan : `RP. 75.000,-`"""
